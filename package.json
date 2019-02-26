@@ -1,0 +1,29 @@
+{
+  "name": "wdelacruz",
+  "version": "1.0.0",
+  "description": "React Personal CV",
+  "main": "src/server.js",
+  "repository": "wdelacruz.com",
+  "author": "Wilowayne De La Cruz G. <wilo0087@gmail.com>",
+  "license": "Wilowayne De La Cruz",
+  "private": true,
+  "scripts": {
+    "start": "yarn babel-node server/index.js",
+    "start_test": "nodemon --exec babel-node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
