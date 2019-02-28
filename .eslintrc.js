@@ -20,6 +20,6 @@ module.exports = {
     'react',
   ],
   rules: {
-    maxLen: 120 // Setup base on 1080p resolución
+    'max-len': ["error", { "code": 120 }]
   },
 };
