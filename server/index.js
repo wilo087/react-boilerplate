@@ -10,7 +10,6 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.static(path.resolve(__dirname, 'node_modules')));
 
 app.get('**', (req, res) => {
-
   // App's index.html file
   const indexFile = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 
@@ -19,7 +18,7 @@ app.get('**', (req, res) => {
   const mainJsFile = 'esta es el js1';
 
   // App's app.css file
-  // const mainCssFile = fs.readFileSync(path.join(__dirname, 'public', 'css', 'main.min.css'), 'utf8');
+  // mainCssFile = fs.readFileSync(path.join(__dirname, 'public', 'css', 'main.min.css'), 'utf8');
   const mainCssFile = ['esta es el Js1'];
 
   // Add a variable query value to each of the resources url's, therefore avoiding cache when neces
