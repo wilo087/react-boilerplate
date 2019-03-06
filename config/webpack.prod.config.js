@@ -19,16 +19,16 @@ const prodConfiguration = env => merge([
       //     vendor: {
       //       test: /[\\/]node_modules[\\/]/,
       //       name: 'vendors',
-      //       chunks: 'all',
-      //     },
-      //   },
+      //       chunks: 'all'
+      //     }
+      //   }
       // },
       minimizer: [new UglifyJsPlugin()],
     },
     plugins: [
       new MiniCssExtractPlugin(),
       new OptimizeCssAssetsPlugin(),
-      new Visualizer({ filename: './public/statistics.html' }),
+      new Visualizer({ filename: './statistics.html' }),
     ],
   },
 ]);

@@ -11,8 +11,8 @@
     "start": "yarn babel-node server.js",
     "start_mon": "nodemon --exec babel-node server.js",
     "build": "yarn webpack --mode development --colors --config config/webpack.base.config.js --env.PLATFORM=developent --env.VERSION=stag --open --hot",
-    "prodbuild": "yarn webpack --mode production --config config/webpack.prod.config.js --env.PLATFORM=production --env.VERSION=stag --progress",
-    "watch": "yarn webpack --progress --colors --watch --config webpack.config.dev.js"
+    "buildprod": "yarn webpack --mode production --config config/webpack.prod.config.js --env.PLATFORM=production --env.VERSION=stag --progress",
+    "watch": "yarn webpack --progress --colors --watch --config config/webpack.base.config.js --env.PLATFORM=developent --env.VERSION=stag --open --hot"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -20,8 +20,7 @@
     "express": "^4.16.4",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-router-dom": "^4.3.1",
-    "sha256": "^0.2.0"
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -33,6 +32,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^5.0.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb": "^17.1.0",

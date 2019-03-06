@@ -1,17 +1,19 @@
-// /* eslint-disable */
+/* eslint-disable */
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
+const APP_DIR = path.resolve(__dirname, '../src');
 
 module.exports = (env) => {
   const { PLATFORM, VERSION } = env;
 
   return merge([
     {
-      entry: ['./src/index.js'],
+      entry: ['@babel/polyfill', APP_DIR],
       output: {
         filename: 'app.js',
         path: path.resolve(__dirname, '../public/'),
@@ -39,11 +41,13 @@ module.exports = (env) => {
         new HtmlWebpackPlugin({
           template: './src/index.html',
           filename: './index.html',
+          // hash: true
         }),
         new webpack.DefinePlugin({
           'process.env.VERSION': JSON.stringify(VERSION),
           'process.env.PLATFORM': JSON.stringify(PLATFORM),
         }),
+        new CopyWebpackPlugin([{ from: 'src/static' }]),
       ],
       watchOptions: {
         aggregateTimeout: 300,
