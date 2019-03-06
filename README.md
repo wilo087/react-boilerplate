@@ -1,4 +1,4 @@
-# React boiler plate witn docker enviroment, unit rest, linter and webpack
+# React boiler plate witn docker enviroment, unit test and linter
 
 ### Requirements
 * Docker version 18.03.1-ce, build 9ee9f40
