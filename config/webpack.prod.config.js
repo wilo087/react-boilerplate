@@ -23,7 +23,9 @@ const prodConfiguration = env => merge([
       //     }
       //   }
       // },
-      minimizer: [new UglifyJsPlugin()],
+      minimizer: [new UglifyJsPlugin({
+        sourceMap: true,
+      })],
     },
     plugins: [
       new MiniCssExtractPlugin(),

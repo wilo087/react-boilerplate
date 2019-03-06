@@ -20,6 +20,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
     'max-len': ["error", { "code": 120 }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
   },

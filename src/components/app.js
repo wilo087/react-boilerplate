@@ -13,7 +13,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className="wcc-page">
-          <img alt="header" src="/public/images/1.jpg" className="app-header" />
+          <img alt="header" src="/images/1.jpg" className="app-header" style={{ width: '100px' }} />
           This is my react app
           {/* // <Routes /> */}
         </div>
