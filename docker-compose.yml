@@ -1,0 +1,12 @@
+version: '3'
+services:
+  react-app:
+    build: '.'
+    image: wilo087/react-boilerplate
+    # restart: always
+    ports:
+      - "3000:3000"
+    tty: true
+    volumes:
+      - ./:/app
+      # - /usr/share/zoneinfo/America/Santo_Domingo:/etc/localtime:ro
