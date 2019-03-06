@@ -8,7 +8,7 @@ EXPOSE 3000
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 RUN $HOME/.yarn/bin/yarn install
 
-RUN yarn global add forever
+# RUN yarn global add forever
 
 # Install dependencies
 RUN yarn install

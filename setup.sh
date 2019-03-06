@@ -9,7 +9,7 @@ npm rebuild node-sass
 # Build js and sass scripts  
 yarn run buildprod
 
-# Run the server with forever
-forever start server.js
+# Run the server
+yarn start
 
 /bin/bash
