@@ -13,6 +13,9 @@ RUN $HOME/.yarn/bin/yarn install
 # Install dependencies
 RUN yarn install
 
+# Add jest global
+RUN yarn global add jest
+
 # ADD setup.sh /app
 RUN ["chmod", "+x", "/app/setup.sh"]
 
