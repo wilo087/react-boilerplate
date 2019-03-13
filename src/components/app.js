@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-// import Routes from '../routes';
+import Routes from './Routes';
 // import Layout from './Layout';
 
 export default class App extends Component {
@@ -13,9 +13,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className="wcc-page">
-          <img alt="header" src="/images/1.jpg" className="app-header" style={{ width: '100px' }} />
-          This is my react app
-          {/* // <Routes /> */}
+          <Routes />
         </div>
       </BrowserRouter>
     );

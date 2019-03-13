@@ -12,7 +12,8 @@
     "start_mon": "nodemon --exec babel-node server.js",
     "build": "rm -rf ./public && yarn webpack --mode development --colors --config config/webpack.base.config.js --env.PLATFORM=developent --env.VERSION=stag --open --hot",
     "buildprod": "rm -rf ./public && yarn webpack --mode production --config config/webpack.prod.config.js --env.PLATFORM=production --env.VERSION=stag --progress",
-    "watch": "yarn webpack --progress --colors --watch --config config/webpack.base.config.js --env.PLATFORM=developent --env.VERSION=stag --open --hot"
+    "watch": "yarn webpack --progress --colors --watch --config config/webpack.base.config.js --env.PLATFORM=developent --env.VERSION=stag --open --hot",
+    "test": "yarn jest"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
