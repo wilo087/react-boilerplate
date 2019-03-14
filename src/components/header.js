@@ -11,7 +11,7 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <div className="wcc-logo">Wilowayne De La Cruz</div>
+        <div className="wcc-logo">Logo</div>
         <ul>
           <li>
             <NavLink to="/" exact activeClassName="selected">Dashboard</NavLink>

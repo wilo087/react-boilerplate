@@ -18,6 +18,8 @@ module.exports = (env) => {
       output: {
         filename: 'app.js',
         path: path.resolve(__dirname, '../public/'),
+        hotUpdateChunkFilename: '_hot_/hot-update.js',
+        hotUpdateMainFilename: '_hot_/hot-update.json',
       },
       module: {
         rules: [
@@ -59,6 +61,7 @@ module.exports = (env) => {
       ],
       devtool: 'source-map',
       watchOptions: {
+        ignored: /node_modules/,
         aggregateTimeout: 300,
         poll: 400,
       },
