@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../Header';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
+        <Header />
         <div className="wcc-aboutus"> About us...</div>
       </div>
     );
