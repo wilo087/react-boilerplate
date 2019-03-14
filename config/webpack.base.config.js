@@ -4,6 +4,7 @@ const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const path = require('path');
 
 const APP_DIR = path.resolve(__dirname, '../src');
@@ -48,6 +49,13 @@ module.exports = (env) => {
           'process.env.PLATFORM': JSON.stringify(PLATFORM),
         }),
         new CopyWebpackPlugin([{ from: 'src/static' }]),
+        new BrowserSyncPlugin({
+          // browse to http://localhost:3000/ during development,
+          // ./public directory is being served
+          host: 'localhost',
+          port: 3000,
+          server: { baseDir: ['public'] },
+        }),
       ],
       devtool: 'source-map',
       watchOptions: {
