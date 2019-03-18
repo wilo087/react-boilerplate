@@ -8,13 +8,12 @@ EXPOSE 3000
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 RUN $HOME/.yarn/bin/yarn install
 
-# RUN yarn global add forever
 
 # Install dependencies
 RUN yarn install
 
 # Add jest global
-RUN yarn global add jest
+RUN yarn global add jest nodemon
 
 # ADD setup.sh /app
 RUN ["chmod", "+x", "/app/setup.sh"]
