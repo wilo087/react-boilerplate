@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../header';
+import Header from '../Header';
 
 class Dashboard extends Component {
   constructor(props) {
