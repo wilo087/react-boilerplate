@@ -1,7 +1,7 @@
 {
-  "name": "wdelacruz",
+  "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "React Personal CV",
+  "description": "React Boilerplate",
   "main": "src/server.js",
   "repository": "wdelacruz.com",
   "author": "Wilowayne De La Cruz G. <wilo0087@gmail.com>",
@@ -49,6 +49,7 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "react-test-renderer": "^16.8.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.2",
