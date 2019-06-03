@@ -15,6 +15,7 @@ module.exports = (env) => {
   return merge([
     {
       entry: [APP_DIR],
+      mode: PLATFORM,
       output: {
         filename: 'app.js',
         path: path.resolve(__dirname, '../public/'),

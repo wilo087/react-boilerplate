@@ -12,7 +12,7 @@
     "start_mon": "nodemon --exec babel-node server.js",
     "build": "rm -rf ./public && yarn webpack --mode development --colors --config config/webpack.base.config.js --env.PLATFORM=developent --env.VERSION=stag --open --hot",
     "buildprod": "rm -rf ./public && yarn webpack --mode production --config config/webpack.prod.config.js --env.PLATFORM=production --env.VERSION=stag --progress",
-    "watch": "rm -rf ./public && yarn webpack --progress --colors --watch --config config/webpack.base.config.js --env.PLATFORM=developent --env.VERSION=stag --open --hot",
+    "watch": "rm -rf ./public && yarn webpack --progress --colors --watch --config config/webpack.base.config.js --env.PLATFORM=development --env.VERSION=stag --open --hot",
     "test": "yarn jest"
   },
   "dependencies": {
