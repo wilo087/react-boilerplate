@@ -1,7 +1,5 @@
 import express from 'express';
 import path from 'path';
-// import fs from 'fs';
-// import sha256 from 'sha256';
 
 const app = express();
 const port = process.env.SERVER_PORT || 3000;
