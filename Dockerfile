@@ -1,23 +1,23 @@
-FROM node:10
-# MAINTAINER Wilowayne De La Cruz <wdelacruz@viva.com.do>
+FROM node:lts-alpine as build-stage
+LABEL MAINTAINER Wilowayne De La Cruz <wilo0087@gmail.com>
 
 WORKDIR /app
-COPY . /app
-EXPOSE 3000
 
-RUN curl -o- -L https://yarnpkg.com/install.sh | bash
-RUN $HOME/.yarn/bin/yarn install
+COPY package*.json .
+COPY yarn.lock .
 
-
-# Install dependencies
+RUN npm install -g yarn
 RUN yarn install
 
 # Add jest global
 RUN yarn global add jest nodemon
 
-# ADD setup.sh /app
-RUN ["chmod", "+x", "/app/setup.sh"]
+COPY . .
+RUN yarn buildprod
 
-# Avoid CRLF windows bug
-RUN sed -i -e 's/\r$//' /app/setup.sh
-ENTRYPOINT ["/app/setup.sh"]
+
+# production stage
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/public /usr/share/nginx/html
+EXPOSE 3000
+CMD ["nginx", "-g", "daemon off;"]

@@ -5,7 +5,7 @@ services:
     image: wilo087/react-boilerplate
     # restart: always
     ports:
-      - "3000:3000"
+      - "3000:80"
     tty: true
     volumes:
       - ./:/app
