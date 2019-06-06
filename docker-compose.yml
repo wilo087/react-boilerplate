@@ -1,11 +1,15 @@
-version: '3'
+version: '3.4'
 services:
   react-app:
-    build: '.'
+    build: 
+      context: '.'
+      target: ${NODE_ENV}
+      args: 
+        NODE_ENV: ${NODE_ENV}
     image: wilo087/react-boilerplate
-    # restart: always
     ports:
-      - "3000:80"
+      - "3080:80"
+      - "3000:3000"
     tty: true
     volumes:
       - ./:/app

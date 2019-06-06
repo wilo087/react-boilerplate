@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Install dependencies
 yarn install
@@ -7,9 +7,9 @@ yarn install
 npm rebuild node-sass
 
 # Build js and sass scripts  
-yarn run buildprod
+yarn watch
 
 # Run the server
-yarn start
+# yarn start
 
-/bin/bash
+/bin/sh
